@@ -1,6 +1,6 @@
 const Telegraf = require("telegraf");
 
-const bot = new Telegraf("1044364733:AAGzupRMRxJ5NT0lOBn5c0EEYF6sE6qHz8M");
+const bot = new Telegraf("");
 
 // bot.start((ctx) => {
 //   ctx.reply(
@@ -40,13 +40,13 @@ bot.use((ctx, next) => {
   if (ctx.updateSubTypes[0] == "text") {
     //console.log(ctx.from.username + " said " + ctx.message.text);
     bot.telegram.sendMessage(
-      -1001346833152,
+      ,
       ctx.from.username + " said " + ctx.message.text
     );
   } else {
     // console.log(ctx.from.username + " said " + ctx.updateSubTypes);
     bot.telegram.sendMessage(
-      -1001346833152,
+      ,
       ctx.from.username + " said " + ctx.message.updateSubTypes
     );
   }
